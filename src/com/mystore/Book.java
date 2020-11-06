@@ -7,18 +7,21 @@ public class Book extends Product
 {
    private String isbn;
    private Integer numberPage;
-   //private Person author;
+   private Person person;
 
 
-
+   public Book() {
+      super();
+   }
+   
    public Book(String isbn, Integer numberPage, Person person, String sku, String title, BigDecimal price, Store[] store)
    {
-      super(sku, title, price, store, person);
+      super(sku, title, price, store);
       this.isbn = isbn;
       this.numberPage = numberPage;
-      //this.author = author;
-      
-      //person.addProduct(this);
+      this.person = person;
+
+      person.setProduct(this);
    }
 
 
@@ -42,32 +45,30 @@ public class Book extends Product
       this.numberPage = numberPage;
    }
 
-  public Person getAuthor()
+   public Person getAuthor()
    {
-     return super.getPerson();
+      return person;
    }
 
-    /*public void setAuthor(Person author)
+   public Person getPerson()
    {
-      this.author = author;
-   }*/
+      return person;
+   }
 
 
-
+   public void setPerson(Person person)
+   {
+      this.person = person;
+   }
 
 
    @Override
    public String toString()
    {
-      return "Book [isbn=" + isbn + ", numberPage=" + numberPage+", author=" + super.getPerson() + ", price=" + super.getPrice() + "]";
+      return "Book [isbn=" + isbn + ", numberPage=" + numberPage + ", author=" + getAuthor() + ", price=" + super.getPrice()
+            + "]";
    }
 
-
-   @Override
-   public BigDecimal getPrice()
-   {
-      return new BigDecimal("10");
-   }
 
 
 }

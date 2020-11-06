@@ -10,8 +10,9 @@ public class Main
 
    public static void main(String[] args)
    {
-      Store[] store = new Store[1];
+      Store[] store = new Store[2];
       store[0] = new Store("Founa", "rue de l'or 2030 bhar lazreg");
+      store[1] = new Store("MG proxi", "rue de l'or 2030 bhar lazreg");
 
       Person author = new Person("Author", "ben Foulen", LocalDate.now());
       Person author2 = new Person("Author2", "ben Foulen", LocalDate.now());
@@ -25,6 +26,7 @@ public class Main
      
       //System.out.println(book1);
       
+      Fish fish1 = new Fish(0.5, "Fish, any of approximately 34000 species of vertebrate animals", true, "1202f", " Daurade royale Fish and Shop", new BigDecimal("60.000"), store);
     
 
       Dvd dvd1 = new Dvd("1h25", producer, "D1570", "L'Homme du Président", new BigDecimal("20"), store);
@@ -47,8 +49,15 @@ public class Main
          System.out.println(iterator.next());
 
       }
+
+      System.out.println(producer.getProducts());
+
+      System.out.println("-----------------------");
       
-     System.out.println(producer.getProducts());
+      System.out.println(fish1);
+      
+      System.out.println("-----------------------");
+      
 
 
    }
