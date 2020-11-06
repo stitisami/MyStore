@@ -37,6 +37,21 @@ public class Dvd extends Product
    {
       this.producer = producer;
    }
+
+
+
+   @Override
+   public String toString()
+   {
+      return "Dvd [duration=" + duration + ", producer=" + producer + ", price=" + getPrice() + "]";
+   }
+
+   @Override
+   public BigDecimal getPrice()
+   {
+      // TODO Auto-generated method stub
+      return new BigDecimal(super.getPrice().intValue()-2) ;
+   }
    
    
 }

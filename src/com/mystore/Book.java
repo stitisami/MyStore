@@ -9,6 +9,7 @@ public class Book extends Product
    private String author;
    
    
+   
    public Book(String isbn, Integer numberPage, String author, String sku, String title, BigDecimal price, Store[] store) {
       super(sku, title, price, store);
       this.isbn = isbn;
@@ -45,6 +46,24 @@ public class Book extends Product
    public void setAuthor(String author)
    {
       this.author = author;
-   }   
+   }
+
+
+
+
+
+   @Override
+   public String toString()
+   {
+      return "Book [isbn=" + isbn + ", numberPage=" + numberPage + ", author=" + author + ", price=" + super.getPrice() + "]";
+   }
+
+
+   @Override
+   public BigDecimal getPrice()
+   {
+      return new BigDecimal("10");
+   }
+   
 
 }
