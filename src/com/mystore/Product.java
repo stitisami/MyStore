@@ -10,21 +10,30 @@ public class Product implements Discount
    private String title;
    private BigDecimal price;
    private Store[] store;
-
-
+   private Person person;
 
    public Product()
    {
 
    }
 
-   public Product(String sku, String title, BigDecimal price, Store[] store)
+   public Product(String sku, String title, BigDecimal price, Store[] store, Person person)
    {
       this.sku = sku;
       this.title = title;
       this.price = price;
       this.store = store;
+      this.person = person;
+      
+      person.setProduct(this);
+      
+      //System.out.println("**********");
    }
+   
+   public void init() { 
+       // logic..
+   }
+
 
    public String getSku()
    {
@@ -64,6 +73,16 @@ public class Product implements Discount
    public void setStore(Store[] store)
    {
       this.store = store;
+   }
+
+   public Person getPerson()
+   {
+      return person;
+   }
+
+   public void setPerson(Person person)
+   {
+      this.person = person;
    }
 
    @Override

@@ -1,6 +1,8 @@
 package com.mystore;
 
 import java.time.LocalDate;
+import java.util.LinkedList;
+import java.util.List;
 
 
 public class Person
@@ -8,7 +10,8 @@ public class Person
    private String firstName;
    private String lastName;
    private LocalDate birthday;
-
+   private LinkedList<Product> products;
+   
    public Person()
    {
       
@@ -18,6 +21,8 @@ public class Person
       this.firstName = firstName;
       this.lastName = lastName;
       this.birthday = birthday;
+
+      this.products = new LinkedList<>();
    }
 
    public String getName()
@@ -54,12 +59,35 @@ public class Person
    {
       this.birthday = birthday;
    }
+   
+
+
+   public LinkedList<Product> getProducts()
+   {
+      return products;
+   }
+   public void setProducts(LinkedList<Product> products)
+   {
+      this.products = products;
+   }
+   public void setProduct(Product product)
+   {
+      this.products.add(product);
+   }
+   
+   
    @Override
    public String toString()
    {
       return "Person [firstName=" + firstName + ", lastName=" + lastName + ", birthday=" + birthday + "]";
    }
    
+   
+   
+   /*public <T, E> String getProducts(){
+      return "dddd";
+      
+   }*/
    
 
 
