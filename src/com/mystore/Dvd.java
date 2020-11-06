@@ -2,16 +2,17 @@ package com.mystore;
 
 import java.math.BigDecimal;
 
+
 public class Dvd extends Product
 {
    String duration;
-   String producer;
-   
+   Person producer;
+
    public Dvd()
    {
    }
-   
-   public Dvd(String duration, String producer, String sku, String title, BigDecimal price, Store[] store)
+
+   public Dvd(String duration, Person producer, String sku, String title, BigDecimal price, Store[] store)
    {
       super(sku, title, price, store);
       this.duration = duration;
@@ -28,12 +29,12 @@ public class Dvd extends Product
       this.duration = duration;
    }
 
-   public String getProducer()
+   public Person getProducer()
    {
       return producer;
    }
 
-   public void setProducer(String producer)
+   public void setProducer(Person producer)
    {
       this.producer = producer;
    }
@@ -50,8 +51,8 @@ public class Dvd extends Product
    public BigDecimal getPrice()
    {
       // TODO Auto-generated method stub
-      return new BigDecimal(super.getPrice().intValue()-2) ;
+      return new BigDecimal(super.getPrice().intValue() - 2);
    }
-   
-   
+
+
 }

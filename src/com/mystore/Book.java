@@ -2,15 +2,17 @@ package com.mystore;
 
 import java.math.BigDecimal;
 
+
 public class Book extends Product
 {
    private String isbn;
    private Integer numberPage;
-   private String author;
-   
-   
-   
-   public Book(String isbn, Integer numberPage, String author, String sku, String title, BigDecimal price, Store[] store) {
+   private Person author;
+
+
+
+   public Book(String isbn, Integer numberPage, Person author, String sku, String title, BigDecimal price, Store[] store)
+   {
       super(sku, title, price, store);
       this.isbn = isbn;
       this.numberPage = numberPage;
@@ -38,12 +40,12 @@ public class Book extends Product
       this.numberPage = numberPage;
    }
 
-   public String getAuthor()
+   public Person getAuthor()
    {
       return author;
    }
 
-   public void setAuthor(String author)
+   public void setAuthor(Person author)
    {
       this.author = author;
    }
@@ -64,6 +66,6 @@ public class Book extends Product
    {
       return new BigDecimal("10");
    }
-   
+
 
 }

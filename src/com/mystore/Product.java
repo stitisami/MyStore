@@ -11,7 +11,7 @@ public class Product implements Discount
    private BigDecimal price;
    private Store[] store;
 
- 
+
 
    public Product()
    {

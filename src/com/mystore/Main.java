@@ -1,6 +1,8 @@
 package com.mystore;
 
 import java.math.BigDecimal;
+import java.time.LocalDate;
+
 
 public class Main
 {
@@ -9,34 +11,24 @@ public class Main
    {
       Store[] store = new Store[1];
       store[0] = new Store("Founa", "rue de l'or 2030 bhar lazreg");
-  
 
-      Book book  = new Book("9789462447752", 250, "Foulen ben foulen", "A560", "LES PETITES MAINS TRUCK", new BigDecimal("15.250"), store);
-      Dvd dvd  = new Dvd("1h25", "Min-ho Woo", "D1570", "L'Homme du Président", new BigDecimal("20"), store);
-
-  
-      System.out.println("Test get Author for Book");
-      System.out.println(book.getAuthor());
+      Person author = new Person("Author", "ben Foulen", LocalDate.now());
+      Person producer = new Person("Producer", "ben Foulen", LocalDate.now());
       
-      System.out.println("---------------------");
-      
-      System.out.println("Test toString Book");
-      System.out.println(book);
-      
-      System.out.println("---------------------");
-      
-      System.out.println("Test get Producer for Dvd");
-      System.out.println(dvd.getProducer());
-      
-      System.out.println("---------------------");
-      
-      System.out.println("Test toString Dvd");
+      Book book = new Book("9789462447752", 250, author, "A560", "LES PETITES MAINS TRUCK", new BigDecimal("15.250"),
+            store);
+      Dvd dvd = new Dvd("1h25", producer, "D1570", "L'Homme du Président", new BigDecimal("20"), store);
 
 
       System.out.println(book);
+      System.out.println(book.getAuthor().getName());
+
+      System.out.println("---------------------");
+
       System.out.println(dvd);
-      
-     
+      System.out.println(dvd.getProducer().getName());
+
+
    }
 
 }
