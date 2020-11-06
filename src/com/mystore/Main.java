@@ -48,7 +48,7 @@ public class Main
 
       }
       
-     //System.out.println(producer.getProducts());
+     System.out.println(producer.getProducts());
 
 
    }
