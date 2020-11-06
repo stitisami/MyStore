@@ -3,6 +3,12 @@ package com.mystore;
 import java.math.BigDecimal;
 import java.util.Arrays;
 
+/**
+ * The product is base class has common attributes and methodes getters and setters (sku, title, price, store)
+ * The product class can be attached to one or more store
+ * @author Nexus2i Teams
+ * @version 1.0
+ */
 
 public class Product implements Discount
 {
@@ -81,6 +87,11 @@ public class Product implements Discount
       return "Product [sku=" + sku + ", title=" + title + ", price=" + price + ", store=" + Arrays.toString(store) + "]";
    }
 
+   /**
+    * This is an override of Method applyDiscount in Discount interface
+    * The price decreases by a discount or by a percentage
+    * @see Discount
+    */
    @Override
    public void applyDiscount(Integer discountValue, String discountType)
    {

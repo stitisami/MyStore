@@ -32,7 +32,6 @@ public class Main
       Dvd dvd1 = new Dvd("1h25", producer, "D1570", "L'Homme du Président", new BigDecimal("20"), store);
       Dvd dvd2 = new Dvd("1h25", producer, "D1570", "L'Homme du Président", new BigDecimal("20"), store);
 
-
       //System.out.println( author.getProducts());
       //System.out.println( producer.getProducts());
       
