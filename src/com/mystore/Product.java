@@ -86,6 +86,11 @@ public class Product implements Discount
    {
       return "Product [sku=" + sku + ", title=" + title + ", price=" + price + ", store=" + Arrays.toString(store) + "]";
    }
+   
+
+   public Person getPerson() {
+      return new Person();
+   }
 
    /**
     * This is an override of Method applyDiscount in Discount interface
@@ -110,8 +115,5 @@ public class Product implements Discount
       price = new BigDecimal(newPrice);
    }
 
-   public Person getPerson() {
-      return new Person();
-   }
 
 }
