@@ -110,5 +110,8 @@ public class Product implements Discount
       price = new BigDecimal(newPrice);
    }
 
+   public Person getPerson() {
+      return new Person();
+   }
 
 }

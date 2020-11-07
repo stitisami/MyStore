@@ -6,6 +6,7 @@ import java.util.List;
 
 public class Person
 {
+   private static final String Book = null;
    private String firstName;
    private String lastName;
    private LocalDate birthday;
@@ -82,12 +83,46 @@ public class Person
    }
    
    
-   
-   /*public <T, E> String getProducts(){
-      return "dddd";
+   /*
+   public static <T extends Product> LinkedList getListProduct(Person person, LinkedList<T> list){
       
-   }*/
+      LinkedList newList = new LinkedList<>();
+      
+      for (int i = 0; i < list.size(); i++)
+      {
+      
+        
+         if((list.get(i) instanceof com.mystore.Book) ) {
+            if(((com.mystore.Book) list.get(i)).getPerson().equals(person)) {
+               newList.add(list.get(i));
+            }
+         }else if((list.get(i) instanceof com.mystore.Dvd) ) {
+            if(((com.mystore.Dvd) list.get(i)).getPerson().equals(person)) {
+               newList.add(list.get(i));
+            }
+         }
+      }
+
+      return newList;
+            
+   }
+   */
    
+   
+public static <T extends Product> LinkedList getListProduct(Person person, LinkedList<T> list){
+      
+      LinkedList newList = new LinkedList<>();
+      
+      for (int i = 0; i < list.size(); i++)
+      {
+         if (list.get(i).getPerson().equals(person)) {
+               newList.add(list.get(i));
+            }
+      }
+
+      return newList;
+            
+   }
 
 
 

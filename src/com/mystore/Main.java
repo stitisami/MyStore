@@ -3,6 +3,7 @@ package com.mystore;
 import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.util.Iterator;
+import java.util.LinkedList;
 
 
 public class Main
@@ -57,7 +58,20 @@ public class Main
       
       System.out.println("-----------------------");
       
-
+      LinkedList<Product> list = new LinkedList<>();
+      list.add(dvd1);
+      list.add(dvd2);
+      list.add(book1);
+      list.add(book2);
+      list.add(book3);
+      list.add(book4);
+      list.add(book5);
+      
+      System.out.println("******** PRODUCT AUTHOR *********");
+      System.out.println(Person.getListProduct(author2, list));
+      
+      System.out.println("*********PRODUCT PRODUCER ********");
+      System.out.println(Person.getListProduct(producer, list));
 
    }
 
